@@ -4,7 +4,7 @@ if (!isset($_SESSION['matric'])) {
     header('Location: login.php');
     exit();
 }
-// Database connection
+
 $servername = "localhost";
 $username = "root";
 $password = "";
