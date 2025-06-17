@@ -1,15 +1,15 @@
 <?php
 session_start();
 
-// Database connection
+
 $servername = "localhost";
-$username = "root"; // Change if your MySQL username is different
-$password = "";     // Change if your MySQL password is not empty
+$username = "root"; 
+$password = "";     
 $dbname = "Lab_7";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
+
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
         if (password_verify($user_password, $row['password'])) {
-            // Authentication successful
+            
             $_SESSION['matric'] = $row['matric'];
             $_SESSION['name'] = $row['name'];
             $_SESSION['role'] = $row['role'];
