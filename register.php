@@ -1,13 +1,13 @@
 <?php
-// Database connection
+
 $servername = "localhost";
-$username = "root"; // Change if your MySQL username is different
-$password = "";     // Change if your MySQL password is not empty
+$username = "root"; 
+$password = "";     
 $dbname = "Lab_7";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
+
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -18,7 +18,7 @@ $success = $error = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $matric = $_POST["matric"];
     $name = $_POST["name"];
-    $user_password = password_hash($_POST["password"], PASSWORD_DEFAULT); // Secure password
+    $user_password = password_hash($_POST["password"], PASSWORD_DEFAULT); 
     $role = $_POST["role"];
 
     $sql = "INSERT INTO users (matric, name, password, role) VALUES (?, ?, ?, ?)";
