@@ -1,10 +1,7 @@
--- Step 1: Create the database
 CREATE DATABASE Lab_7;
 
--- Step 2: Use the database
-USE Lab_7;
 
--- Step 2: Create the users table
+USE Lab_7;
 CREATE TABLE users (
     matric VARCHAR(10) PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
