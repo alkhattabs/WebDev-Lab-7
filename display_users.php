@@ -4,15 +4,15 @@ if (!isset($_SESSION['matric'])) {
     header('Location: login.php');
     exit();
 }
-// Database connection
+
 $servername = "localhost";
-$username = "root"; // Change if your MySQL username is different
-$password = "";     // Change if your MySQL password is not empty
+$username = "root"; 
+$password = "";     
 $dbname = "Lab_7";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
+
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -27,7 +27,7 @@ $result = $conn->query($sql);
     <title>Display Users</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Remove old table styles, now using style.css */
+        
     </style>
 </head>
 <body>
